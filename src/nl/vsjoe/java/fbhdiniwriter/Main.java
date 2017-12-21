@@ -22,7 +22,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
-		this.primaryStage.setTitle("FlashBack HD ini Builder");
+		this.primaryStage.setTitle(Loc.TITLE);
 		
 		initRootLayout();
 	}
