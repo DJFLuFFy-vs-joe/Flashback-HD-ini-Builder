@@ -1,6 +1,10 @@
 package nl.vsjoe.java.fbhdiniwriter.view;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import nl.vsjoe.java.fbhdiniwriter.Main;
+import nl.vsjoe.java.fbhdiniwriter.model.Game;
 
 /**
  * 
@@ -8,8 +12,14 @@ import nl.vsjoe.java.fbhdiniwriter.Main;
  *
  */
 public class GamesOverviewController {
-	
+
 	private Main main;
+	
+	@FXML
+	private TableView<Game> gameTable;
+	
+	@FXML
+	private TableColumn<Game, String> gameName;
 	
 	public void setMain(Main main) {
 		this.main = main;
