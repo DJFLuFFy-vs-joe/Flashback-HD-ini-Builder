@@ -7,10 +7,15 @@ package nl.vsjoe.java.fbhdiniwriter.libs;
  */
 
 public class Loc {
-	public static String view = "view/";
+	public static final String VIEW = "view/";
 	public static final String TITLE = "FlashBack HD ini Builder";
 	
 	public static String getLayout(String layout) {
-		return view + layout + ".fxml";
+		return VIEW + layout + ".fxml";
 	}
+	
+	// URL Collection
+	
+	public static final String WIKI = "https://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder/wiki";
+	
 }
