@@ -3,6 +3,7 @@ package nl.vsjoe.java.fbhdiniwriter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import nl.vsjoe.java.fbhdiniwriter.libs.GoToWebsite;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 import nl.vsjoe.java.fbhdiniwriter.view.GamesOverviewController;
 import nl.vsjoe.java.fbhdiniwriter.view.RootLayoutController;
@@ -31,8 +32,6 @@ public class Main extends Application {
 		renderGamesOverview();
 	}
 
-
-
 	public void renderGamesOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
@@ -48,8 +47,6 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-
-
 
 	public void initRootLayout() {
 		try {
@@ -70,8 +67,10 @@ public class Main extends Application {
 		//TODO create some Logic
 
 	}
-
-
+	
+	public void openWiki() {
+		new GoToWebsite(Loc.VIEW).go();
+	}
 
 	public static void main(String[] args) {
 		launch(args);
