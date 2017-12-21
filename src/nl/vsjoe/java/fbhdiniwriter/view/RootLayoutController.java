@@ -38,6 +38,11 @@ public class RootLayoutController {
 	}
 	
 	@FXML
+	private void handleOpenWiki() {
+		main.openWiki();
+	}
+	
+	@FXML
 	private void handleLoadGames() {
 		
 	}
