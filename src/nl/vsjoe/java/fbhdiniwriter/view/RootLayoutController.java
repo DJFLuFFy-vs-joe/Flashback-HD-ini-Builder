@@ -1,5 +1,6 @@
 package nl.vsjoe.java.fbhdiniwriter.view;
 
+import javafx.fxml.FXML;
 import nl.vsjoe.java.fbhdiniwriter.Main;
 
 /**
@@ -18,5 +19,23 @@ public class RootLayoutController {
 		this.main = main;
 	}
 	
+	@FXML
+	private void handleExit() {
+		
+	}
 	
+	@FXML
+	private void handleAbout() {
+		
+	}
+	
+	@FXML
+	private void handleLoadGames() {
+		
+	}
+	
+	@FXML
+	private void handleCreateIni() {
+		
+	}
 }
