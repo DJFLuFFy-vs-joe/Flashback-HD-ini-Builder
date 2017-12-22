@@ -21,8 +21,16 @@ public class GamesOverviewController {
 	@FXML
 	private TableColumn<Game, String> gameName;
 	
+	@FXML
+	private void initialize() {
+		gameName.setCellValueFactory(cellData -> cellData.getValue().getGameNameProperty());
+		
+	}
+	
 	public void setMain(Main main) {
 		this.main = main;
+		
+		gameTable.setItems(main.getGames());
 	}
 
 }
