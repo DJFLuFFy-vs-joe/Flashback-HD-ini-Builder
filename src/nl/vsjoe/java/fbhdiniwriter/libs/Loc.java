@@ -18,4 +18,10 @@ public class Loc {
 	
 	public static final String WIKI = "https://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder/wiki";
 	
+	// File Collection
+	
+	public static final String GAMES_FOLDER = "games";
+	public static final String INI_FOLDER = "ini_folder";
+	
+	
 }
