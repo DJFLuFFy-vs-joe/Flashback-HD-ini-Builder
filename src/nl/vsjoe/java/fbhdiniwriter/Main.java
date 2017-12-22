@@ -3,7 +3,7 @@ package nl.vsjoe.java.fbhdiniwriter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import nl.vsjoe.java.fbhdiniwriter.libs.GoToWebsite;
+import nl.vsjoe.java.fbhdiniwriter.libs.CreateDirectories;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 import nl.vsjoe.java.fbhdiniwriter.view.GamesOverviewController;
 import nl.vsjoe.java.fbhdiniwriter.view.RootLayoutController;
@@ -24,12 +24,18 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
+		startupSequence();
+		
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle(Loc.TITLE);
 
 		initRootLayout();
 
 		renderGamesOverview();
+	}
+	
+	private void startupSequence() {
+		new CreateDirectories();
 	}
 
 	public void renderGamesOverview() {
