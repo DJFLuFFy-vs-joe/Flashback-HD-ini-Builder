@@ -45,7 +45,7 @@ public class RootLayoutController {
 	
 	@FXML
 	private void handleLoadGames() {
-		
+		main.loadGames();
 	}
 	
 	@FXML
