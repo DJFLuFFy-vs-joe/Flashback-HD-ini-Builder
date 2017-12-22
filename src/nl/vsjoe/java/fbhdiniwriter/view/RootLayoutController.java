@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import nl.vsjoe.java.fbhdiniwriter.Main;
+import nl.vsjoe.java.fbhdiniwriter.libs.GoToWebsite;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 
 /**
@@ -39,7 +40,7 @@ public class RootLayoutController {
 	
 	@FXML
 	private void handleOpenWiki() {
-		main.openWiki();
+		new GoToWebsite(Loc.WIKI).go();
 	}
 	
 	@FXML
