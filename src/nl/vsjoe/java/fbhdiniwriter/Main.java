@@ -1,5 +1,9 @@
 package nl.vsjoe.java.fbhdiniwriter;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -25,7 +29,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		startupSequence();
-		
+
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle(Loc.TITLE);
 
@@ -33,7 +37,7 @@ public class Main extends Application {
 
 		renderGamesOverview();
 	}
-	
+
 	private void startupSequence() {
 		new CreateDirectories();
 	}
@@ -43,12 +47,12 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource(Loc.getLayout("GamesOverview")));
 			AnchorPane gamesOverview = loader.load();
-			
+
 			rootLayout.setCenter(gamesOverview);
-			
+
 			GamesOverviewController controller = loader.getController();
 			controller.setMain(this);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -73,7 +77,33 @@ public class Main extends Application {
 		//TODO create some Logic
 
 	}
-	
+
+	public void loadGames() {
+		//TODO this is just Test code for debugging
+		File gamesFolder = new File(Loc.GAMES_FOLDER);
+		File[] gamesArray = gamesFolder.listFiles();
+		List<String> games = new ArrayList<String>();
+
+		for (int i=0; i < gamesArray.length; i++) {
+			if (gamesArray[i].isFile()) {
+				if(isBinFile(gamesArray[i].getName())) {
+					games.add(gamesArray[i].getName());
+					System.out.println(gamesArray[i].getName());
+				}
+			}
+		}
+	}
+
+	private boolean isBinFile(String file) {
+		if (file.length() >= 4 ) {
+			String ext = file.substring(file.length() - 4);
+			if (ext.equals(".bin")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}
