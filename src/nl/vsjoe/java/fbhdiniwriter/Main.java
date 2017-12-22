@@ -1,14 +1,14 @@
 package nl.vsjoe.java.fbhdiniwriter;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import nl.vsjoe.java.fbhdiniwriter.libs.CreateDirectories;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
+import nl.vsjoe.java.fbhdiniwriter.model.Game;
 import nl.vsjoe.java.fbhdiniwriter.view.GamesOverviewController;
 import nl.vsjoe.java.fbhdiniwriter.view.RootLayoutController;
 import javafx.scene.Scene;
@@ -23,8 +23,14 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 
+	private ObservableList<Game> games = FXCollections.observableArrayList();
+
 	private Stage primaryStage;
 	private BorderPane rootLayout;
+
+	public ObservableList<Game> getGames() {
+		return games;
+	}
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -79,21 +85,29 @@ public class Main extends Application {
 	}
 
 	public void loadGames() {
-		//TODO this is just Test code for debugging
 		File gamesFolder = new File(Loc.GAMES_FOLDER);
 		File[] gamesArray = gamesFolder.listFiles();
-		List<String> games = new ArrayList<String>();
 
 		for (int i=0; i < gamesArray.length; i++) {
 			if (gamesArray[i].isFile()) {
 				if(isBinFile(gamesArray[i].getName())) {
-					games.add(gamesArray[i].getName());
-					System.out.println(gamesArray[i].getName());
+					Game game = new Game(gamesArray[i].getName());
+					if(!isDuplicate(game)) {
+						games.add(game);
+					}
 				}
 			}
 		}
 	}
 
+	private boolean isDuplicate(Game game) {
+		for (Game gameobj : games) {
+			if (gameobj.getGameName().equals(game.getGameName())) {
+				return true;
+			}
+		}
+		return false;
+	}
 	private boolean isBinFile(String file) {
 		if (file.length() >= 4 ) {
 			String ext = file.substring(file.length() - 4);
