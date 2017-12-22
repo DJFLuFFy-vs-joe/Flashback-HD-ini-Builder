@@ -68,10 +68,6 @@ public class Main extends Application {
 
 	}
 	
-	public void openWiki() {
-		new GoToWebsite(Loc.VIEW).go();
-	}
-
 	public static void main(String[] args) {
 		launch(args);
 	}
