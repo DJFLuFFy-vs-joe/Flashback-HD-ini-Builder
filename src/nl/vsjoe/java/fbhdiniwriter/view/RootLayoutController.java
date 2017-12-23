@@ -33,7 +33,7 @@ public class RootLayoutController {
 		 Alert alert = new Alert(AlertType.INFORMATION);
 	        alert.setTitle(Loc.TITLE);
 	        alert.setHeaderText("About");
-	        alert.setContentText("Author: DJFLuFFy vs joe\nhttps://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder");
+	        alert.setContentText("Author: DJFLuFFy vs joe\nVersion " + Loc.VERSION + "\nhttps://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder");
 
 	        alert.showAndWait();
 	}
