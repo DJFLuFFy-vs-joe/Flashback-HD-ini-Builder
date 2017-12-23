@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -25,30 +26,31 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="525.0">
                <children>
-                  <TextField layoutX="94.0" layoutY="45.0" prefHeight="25.0" prefWidth="367.0" />
-                  <TextField layoutX="94.0" layoutY="79.0" prefHeight="25.0" prefWidth="367.0" />
-                  <TextField layoutX="94.0" layoutY="111.0" prefHeight="25.0" prefWidth="367.0" />
-                  <TextField layoutX="94.0" layoutY="144.0" prefHeight="25.0" prefWidth="367.0" />
-                  <TextField layoutX="94.0" layoutY="177.0" />
-                  <TextField layoutX="94.0" layoutY="209.0" />
-                  <TextField layoutX="94.0" layoutY="241.0" />
-                  <TextField layoutX="94.0" layoutY="275.0" />
-                  <Text layoutX="56.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" />
-                  <Text layoutX="52.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System" />
-                  <Text layoutX="55.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
-                  <Text layoutX="26.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
-                  <Text layoutX="54.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D-Pad" />
-                  <Text layoutX="40.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button A" />
-                  <Text layoutX="40.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button B" />
-                  <Text layoutX="40.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button C" />
-                  <TextField layoutX="313.0" layoutY="184.0" />
-                  <TextField layoutX="313.0" layoutY="216.0" />
-                  <TextField layoutX="313.0" layoutY="248.0" />
-                  <TextField layoutX="313.0" layoutY="282.0" />
-                  <Text layoutX="273.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D-Pad" />
-                  <Text layoutX="259.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button A" />
-                  <Text layoutX="259.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button B" />
-                  <Text layoutX="259.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button C" />
+                  <TextField fx:id="gameNameTextField" layoutX="82.0" layoutY="14.0" prefHeight="25.0" prefWidth="367.0" />
+                  <TextField fx:id="systemTextField" layoutX="82.0" layoutY="48.0" prefHeight="25.0" prefWidth="367.0" />
+                  <TextField fx:id="genreTextField" layoutX="82.0" layoutY="80.0" prefHeight="25.0" prefWidth="367.0" />
+                  <TextField fx:id="descriptionTextField" layoutX="82.0" layoutY="113.0" prefHeight="25.0" prefWidth="367.0" />
+                  <TextField fx:id="dPadTextField" layoutX="82.0" layoutY="146.0" />
+                  <TextField fx:id="buttonATextField" layoutX="82.0" layoutY="178.0" />
+                  <TextField fx:id="buttonBTextField" layoutX="82.0" layoutY="210.0" />
+                  <TextField fx:id="buttonCTextField" layoutX="82.0" layoutY="244.0" />
+                  <Text layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" />
+                  <Text layoutX="40.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System" />
+                  <Text layoutX="43.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
+                  <Text layoutX="14.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                  <Text layoutX="42.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D-Pad" />
+                  <Text layoutX="28.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button A" />
+                  <Text layoutX="28.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button B" />
+                  <Text layoutX="28.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button C" />
+                  <TextField fx:id="startTextField" layoutX="300.0" layoutY="146.0" />
+                  <TextField fx:id="buttonXTextField" layoutX="300.0" layoutY="177.0" />
+                  <TextField fx:id="buttonYTextField" layoutX="300.0" layoutY="210.0" />
+                  <TextField fx:id="buttonZTextField" layoutX="300.0" layoutY="244.0" />
+                  <Text layoutX="265.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start" />
+                  <Text layoutX="245.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button X" />
+                  <Text layoutX="246.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button Y" />
+                  <Text layoutX="245.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Button Z" />
+                  <Button layoutX="442.0" layoutY="339.0" mnemonicParsing="false" text="Save game info" />
                </children></AnchorPane>
         </items>
       </SplitPane>
