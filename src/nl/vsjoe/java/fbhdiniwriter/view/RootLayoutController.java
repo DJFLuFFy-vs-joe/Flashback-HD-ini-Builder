@@ -50,6 +50,6 @@ public class RootLayoutController {
 	
 	@FXML
 	private void handleCreateIni() {
-		
+		main.createIniFile();
 	}
 }

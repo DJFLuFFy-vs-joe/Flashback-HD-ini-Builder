@@ -13,6 +13,7 @@ import nl.vsjoe.java.fbhdiniwriter.model.Game;
  * @author DJFLuFFy vs joe
  *
  */
+
 public class GamesOverviewController {
 
 	private Main main;

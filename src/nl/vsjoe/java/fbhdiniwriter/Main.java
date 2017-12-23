@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import nl.vsjoe.java.fbhdiniwriter.libs.CreateDirectories;
+import nl.vsjoe.java.fbhdiniwriter.libs.IniFileCreator;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 import nl.vsjoe.java.fbhdiniwriter.model.Game;
 import nl.vsjoe.java.fbhdiniwriter.view.GamesOverviewController;
@@ -116,6 +117,10 @@ public class Main extends Application {
 			}
 		}
 		return false;
+	}
+	
+	public void createIniFile() {
+		new IniFileCreator(games);
 	}
 
 	public static void main(String[] args) {
