@@ -1,8 +1,8 @@
 package nl.vsjoe.java.fbhdiniwriter.view;
 
-import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import nl.vsjoe.java.fbhdiniwriter.Main;
@@ -16,12 +16,15 @@ import nl.vsjoe.java.fbhdiniwriter.model.Game;
 public class GamesOverviewController {
 
 	private Main main;
-	
+
 	@FXML
 	private TableView<Game> gameTable;
 	
 	@FXML
 	private TableColumn<Game, String> gameName;
+	
+	@FXML
+	private Label fileNameLabel;
 	
 	@FXML
 	private TextField gameNameTextField;
@@ -70,8 +73,28 @@ public class GamesOverviewController {
 		
 	}
 	
+	@FXML
+	private void handleSaveGame() {
+		Game selectedGame = gameTable.getSelectionModel().getSelectedItem();
+		if(selectedGame != null) {
+			selectedGame.setGameName(gameNameTextField.getText());
+			selectedGame.setPlatform(systemTextField.getText());
+			selectedGame.setGenre(genreTextField.getText());
+			selectedGame.setDescription(descriptionTextField.getText());
+			selectedGame.setPadD(dPadTextField.getText());
+			selectedGame.setStart(startTextField.getText());
+			selectedGame.setBtnA(buttonATextField.getText());
+			selectedGame.setBtnB(buttonBTextField.getText());
+			selectedGame.setBtnC(buttonCTextField.getText());
+			selectedGame.setBtnX(buttonXTextField.getText());
+			selectedGame.setBtnY(buttonYTextField.getText());
+			selectedGame.setBtnZ(buttonZTextField.getText());
+		}
+	}
+	
 	private void showGameDetails(Game game) {
 		if (game != null) {
+			fileNameLabel.setText(game.getFileName());
 			gameNameTextField.setText(game.getGameName());
 			systemTextField.setText(game.getPlatform());
 			genreTextField.setText(game.getGenre());
@@ -84,6 +107,20 @@ public class GamesOverviewController {
 			buttonXTextField.setText(game.getBtnX());
 			buttonYTextField.setText(game.getBtnY());
 			buttonZTextField.setText(game.getBtnZ());
+		} else {
+			fileNameLabel.setText("");
+			gameNameTextField.setText("");
+			systemTextField.setText("");
+			genreTextField.setText("");
+			descriptionTextField.setText("");
+			dPadTextField.setText("");
+			startTextField.setText("");
+			buttonATextField.setText("");
+			buttonBTextField.setText("");
+			buttonCTextField.setText("");
+			buttonXTextField.setText("");
+			buttonYTextField.setText("");
+			buttonZTextField.setText("");
 		}
 	}
 	
