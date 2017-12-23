@@ -13,6 +13,8 @@ import nl.vsjoe.java.fbhdiniwriter.model.Game;
 import nl.vsjoe.java.fbhdiniwriter.view.GamesOverviewController;
 import nl.vsjoe.java.fbhdiniwriter.view.RootLayoutController;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -118,9 +120,18 @@ public class Main extends Application {
 		}
 		return false;
 	}
-	
+
 	public void createIniFile() {
-		new IniFileCreator(games);
+		if (games.size() >=1) {
+			new IniFileCreator(games);
+		} else {
+			Alert alert = new Alert(AlertType.ERROR);
+	        alert.setTitle("No games in Database");
+	        alert.setHeaderText("Oops!");
+	        alert.setContentText("It seems like you don't have any games loaded in the Database.\nFor more info Please visit the Wiki");
+
+	        alert.showAndWait();
+		}
 	}
 
 	public static void main(String[] args) {
