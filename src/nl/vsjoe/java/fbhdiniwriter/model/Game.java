@@ -199,8 +199,7 @@ public class Game {
 	}
 
 	private String getGame(String filename) {
-		//TODO add logic to this method
-		String gameName = filename;
+		String gameName = filename.substring(0, filename.length() - 4);
 		return gameName;
 	}
 }
