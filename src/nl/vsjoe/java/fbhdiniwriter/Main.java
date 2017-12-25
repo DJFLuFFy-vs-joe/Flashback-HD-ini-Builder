@@ -55,7 +55,7 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource(Loc.getLayout("GamesOverview")));
-			AnchorPane gamesOverview = loader.load();
+			AnchorPane gamesOverview = (AnchorPane) loader.load();
 
 			rootLayout.setCenter(gamesOverview);
 
@@ -70,8 +70,9 @@ public class Main extends Application {
 	public void initRootLayout() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource(Loc.getLayout("Rootlayout")));
-			rootLayout = loader.load();
+			loader.setLocation(getClass().getResource(Loc.getLayout("Rootlayout")));
+			System.out.println(loader.getLocation());
+			rootLayout = (BorderPane) loader.load();
 
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
