@@ -70,8 +70,10 @@ public class MainApp extends Application {
 	public void initRootLayout() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource(Loc.getLayout("Rootlayout")));
-			System.out.println(loader.getLocation());
+			loader.setLocation(MainApp.class.getResource("view/rootlayout.fxml"));
+			System.out.println(MainApp.class.getResource("view/rootlayout.fxml"));
+			System.out.println(getClass().getResource("view/rootlayout.fxml"));
+			System.out.println(MainApp.class.getResource("MainApp.class"));
 			rootLayout = (BorderPane) loader.load();
 
 			Scene scene = new Scene(rootLayout);
