@@ -1,6 +1,8 @@
 # Flashback-HD-ini-Builder
 This program will create a games folder and then scans the games folder to create an ini file that can be pasted into the flashback HD Console
 
+Before you start make sure you have the latest version of Java installed https://www.java.com/en/
+
 you can dowload the program here 
 
 [FlashbackHD-ini-Builder-v1.zip](https://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder/blob/master/Compiled/FlashbackHD-ini-Builder-v1.zip)
