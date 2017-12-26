@@ -3,4 +3,4 @@ This program will create a games folder and then scans the games folder to creat
 
 you can dowload the program here 
 
-(FlashbackHD-ini-Builder-v1.zip)[Flashback-HD-ini-Builder/Compiled/FlashbackHD-ini-Builder-v1.zip]
+[FlashbackHD-ini-Builder-v1.zip](Flashback-HD-ini-Builder/Compiled/FlashbackHD-ini-Builder-v1.zip)
