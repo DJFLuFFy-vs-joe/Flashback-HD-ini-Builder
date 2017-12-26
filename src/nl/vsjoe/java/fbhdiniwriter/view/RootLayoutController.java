@@ -3,7 +3,7 @@ package nl.vsjoe.java.fbhdiniwriter.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import nl.vsjoe.java.fbhdiniwriter.Main;
+import nl.vsjoe.java.fbhdiniwriter.MainApp;
 import nl.vsjoe.java.fbhdiniwriter.libs.GoToWebsite;
 import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 
@@ -17,9 +17,9 @@ import nl.vsjoe.java.fbhdiniwriter.libs.Loc;
 
 public class RootLayoutController {
 	
-	private Main main;
+	private MainApp main;
 	
-	public void setMain (Main main) {
+	public void setMain (MainApp main) {
 		this.main = main;
 	}
 	

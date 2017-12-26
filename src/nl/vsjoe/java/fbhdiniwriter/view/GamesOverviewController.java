@@ -5,7 +5,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import nl.vsjoe.java.fbhdiniwriter.Main;
+import nl.vsjoe.java.fbhdiniwriter.MainApp;
 import nl.vsjoe.java.fbhdiniwriter.model.Game;
 
 /**
@@ -16,7 +16,7 @@ import nl.vsjoe.java.fbhdiniwriter.model.Game;
 
 public class GamesOverviewController {
 
-	private Main main;
+	private MainApp main;
 
 	@FXML
 	private TableView<Game> gameTable;
@@ -125,7 +125,7 @@ public class GamesOverviewController {
 		}
 	}
 	
-	public void setMain(Main main) {
+	public void setMain(MainApp main) {
 		this.main = main;
 		
 		gameTable.setItems(main.getGames());

@@ -24,7 +24,7 @@ import javafx.scene.layout.BorderPane;
  *
  */
 
-public class Main extends Application {
+public class MainApp extends Application {
 
 	private ObservableList<Game> games = FXCollections.observableArrayList();
 
@@ -54,7 +54,7 @@ public class Main extends Application {
 	public void renderGamesOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource(Loc.getLayout("GamesOverview")));
+			loader.setLocation(MainApp.class.getResource(Loc.getLayout("GamesOverview")));
 			AnchorPane gamesOverview = (AnchorPane) loader.load();
 
 			rootLayout.setCenter(gamesOverview);
