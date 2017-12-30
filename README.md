@@ -5,7 +5,7 @@ Before you start make sure you have the latest version of Java installed https:/
 
 you can dowload the program here 
 
-[FlashbackHD-ini-Builder-v1.zip](https://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder/blob/master/Compiled/FlashbackHD-ini-Builder-v1.zip)
+[FlashbackHD-ini-Builder-v1.zip](https://github.com/DJFLuFFy-vs-joe/Flashback-HD-ini-Builder/releases/tag/V1)
 
 Unzip the file
 
